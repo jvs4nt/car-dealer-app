@@ -33,40 +33,42 @@ function FilterPage() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">Vehicle filter</h1>
-      <div>
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="make">Brand</label>
-        <select
-            id="make"
-            className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            value={selectedMake || ''}
-            
-          >
-            <option value="">Selecione uma marca</option>
-            {makes.map((make) => (
-              <option key={make.MakeId} value={make.MakeName}>
-                {make.MakeName}
-              </option>
-            ))}
-          </select>
-      </div>
-      <div className="w-full md:w-1/2 xl:w-1/3 p-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="year">
-            Ano
-          </label>
-          <select
-            id="year"
-            className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-            value={selectedYear || ''}
-            onChange={handleYearChange}
-          >
-            <option value="">Selecione um ano</option>
-            {years.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
+      <div className="flex flex-wrap -mx-4">
+        <div className="w-full md:w-1/2 xl:w-1/3 p-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="make">Brand</label>
+            <select
+                id="make"
+                className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                value={selectedMake || ''}
+            >
+                <option value="">Selecione uma marca</option>
+                {makes.map((make) => (
+                <option key={make.MakeId} value={make.MakeName}>
+                    {make.MakeName}
+                </option>
+                ))}
+            </select>
         </div>
+        <div className="w-full md:w-1/2 xl:w-1/3 p-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="year">
+                Ano
+            </label>
+            <select
+                id="year"
+                className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                value={selectedYear || ''}
+                onChange={handleYearChange}
+            >
+                <option value="">Selecione um ano</option>
+                {years.map((year) => (
+                    <option key={year} value={year}>
+                        {year}
+                    </option>
+                ))}
+            </select>
+        </div>
+      </div>
+      
     </div>
   );
 }
