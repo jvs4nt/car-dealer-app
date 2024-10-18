@@ -43,8 +43,10 @@ function FilterPage() {
         }
     };
   
+    const isButtonDisabled = !selectedMake || !selectedYear;
+
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 mt-10">
       <h1 className="text-3xl font-bold mb-4">Vehicle filter</h1>
       <div className="flex flex-wrap -mx-4">
         <div className="w-full md:w-1/2 xl:w-1/3 p-4">
@@ -53,6 +55,7 @@ function FilterPage() {
                 id="make"
                 className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 value={selectedMake || ''}
+                onChange={handleMakeChange}
             >
                 <option value="">Select a brand</option>
                 {makes.map((make) => (
@@ -82,13 +85,12 @@ function FilterPage() {
         </div>
       </div>
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        className={`font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-6 ${isButtonDisabled ? 'bg-gray-400 cursor-not-allowed opacity-50' : 'bg-blue-500 hover:bg-blue-700 text-white'}`}
         onClick={handleNextClick}
-        disabled={!selectedMake || !selectedYear}
+        disabled={ isButtonDisabled}
       >
         Next
       </button>
-      
     </div>
   );
 }
