@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 interface VehicleMake {
-    Make_ID: number;
-    Make_Name: string;
+    MakeId: number;
+    MakeName: string;
   }
 
 function FilterPage() {
@@ -31,8 +31,8 @@ function FilterPage() {
           >
             <option value="">Selecione uma marca</option>
             {makes.map((make) => (
-              <option key={make.Make_ID} value={make.Make_Name}>
-                {make.Make_Name}
+              <option key={make.MakeId} value={make.MakeName}>
+                {make.MakeName}
               </option>
             ))}
           </select>
