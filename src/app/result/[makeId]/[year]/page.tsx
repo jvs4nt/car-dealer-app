@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { useParams } from 'next/navigation';
 
 interface Vehicle {
@@ -12,7 +11,7 @@ interface Vehicle {
 }
 
 function ResultPage() {
-    const { makeId, year } = useParams(); 
+    const { makeId, year } = useParams();
     const [vehicles, setVehicles] = useState<Vehicle[]>([]);
 
     useEffect(() => {
@@ -28,7 +27,14 @@ function ResultPage() {
                             Model_ID: item.Model_ID,
                             Model_Name: item.Model_Name
                         }));
-                        setVehicles(vehiclesData);
+
+                        const uniqueVehiclesData = vehiclesData.filter((vehicle: Vehicle, index: number, self: Vehicle[]) =>
+                            index === self.findIndex((v: Vehicle) => (
+                                v.Model_ID === vehicle.Model_ID
+                            ))
+                        );
+
+                        setVehicles(uniqueVehiclesData);
                     }
                 })
                 .catch(error => {
