@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 
 interface Vehicle {
     Make_ID: number;
@@ -59,6 +60,14 @@ function ResultPage() {
             ) : (
                 <p>Nenhum veículo encontrado para esta marca e ano.</p>
             )}
+
+            <Link href={`/`}>
+                <button
+                    className={'font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-6 bg-blue-500 hover:bg-blue-700 text-white'}
+                >
+                    Go Back
+                </button>
+            </Link>
         </div>
     );
 }
