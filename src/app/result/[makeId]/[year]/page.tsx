@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect, use } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface Vehicle {
     MakeId: number;
@@ -11,7 +11,20 @@ interface Vehicle {
 
 function ResultPage() {
     const router = useRouter();
+    const searchParams = useSearchParams(); 
     const [vehicles, setVehicles] = useState<Vehicle[]>([]);
+    const [makeId, setMakeId] = useState<string | null>(null);
+    const [year, setYear] = useState<string | null>(null);
+
+    useEffect(() => {
+        const queryMakeId = searchParams.get('makeId'); 
+        const queryYear = searchParams.get('year'); 
+    
+        if (queryMakeId && queryYear) {
+          setMakeId(queryMakeId);
+          setYear(queryYear);
+        }
+      }, [searchParams]);
 
     return (
         <div className="container mx-auto p-4 mt-10">
