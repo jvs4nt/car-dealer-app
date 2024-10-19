@@ -37,14 +37,14 @@ function FilterPage() {
     const isButtonDisabled = !selectedMake || !selectedYear;
 
     return (
-        <div className="container mx-auto p-4 mt-10">
+        <div className="container mx-auto p-4 mt-10 flex flex-col items-center">
             <h1 className="text-3xl font-bold mb-4">Vehicle filter</h1>
             <div className="flex flex-wrap -mx-4">
                 <div className="w-full md:w-1/2 xl:w-1/3 p-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="make">Brand</label>
                     <select
                         id="make"
-                        className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        className="block w-full bg-slate-700 border border-blue-500 text-white py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-slate-600 focus:border-gray-500"
                         value={selectedMake || ''}
                         onChange={handleMakeChange}
                     >
@@ -60,7 +60,7 @@ function FilterPage() {
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="year">Year</label>
                     <select
                         id="year"
-                        className="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        className="block w-full bg-slate-700 border border-blue-500 text-white py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-slate-600 focus:border-gray-500"
                         value={selectedYear || ''}
                         onChange={handleYearChange}
                     >
