@@ -65,10 +65,15 @@ Follow the instructions below to set up and run the Car Dealer App on your local
 ## Screenshots
 
 - Filter:
-![image](https://github.com/user-attachments/assets/8feca250-5a51-4f52-ad92-e1b346e1c2d8)
+
+![image](https://github.com/user-attachments/assets/e266a4c8-adf1-4573-a095-94e8f41b004d)
+
+
 
 - Results:
-![image](https://github.com/user-attachments/assets/41a59625-9815-440d-b586-c5502e74d2b4)
+
+ ![image](https://github.com/user-attachments/assets/d6d7f38f-56e5-4ec5-bfb8-c1056b0fdd7c)
+
 
 
 ### Additional information:
