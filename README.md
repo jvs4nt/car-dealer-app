@@ -65,10 +65,11 @@ Follow the instructions below to set up and run the Car Dealer App on your local
 ## Screenshots
 
 - Filter:
-![image](https://github.com/user-attachments/assets/806a3f75-6b47-478b-8786-6289aa0998ae)
+![image](https://github.com/user-attachments/assets/8feca250-5a51-4f52-ad92-e1b346e1c2d8)
 
 - Results:
-![image](https://github.com/user-attachments/assets/8f2d8d60-4c6a-4bf4-b634-30a729bf80a8)
+![image](https://github.com/user-attachments/assets/41a59625-9815-440d-b586-c5502e74d2b4)
+
 
 ### Additional information:
 I didn't implemented the "generateStaticParams" function because I got short time to do it and didn't have experience with it, but apart from that, the project is complete. Thank you for the opportunity, I'm sure that I can help you a lot with my skills.
