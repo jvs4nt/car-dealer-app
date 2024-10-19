@@ -61,3 +61,16 @@ Follow the instructions below to set up and run the Car Dealer App on your local
 - Use of React's Suspense for handling loading states.
 - Responsive design using Tailwind CSS.
 - Error handling for data fetching issues.
+
+## Screenshots
+
+- Filter:
+![image](https://github.com/user-attachments/assets/806a3f75-6b47-478b-8786-6289aa0998ae)
+
+- Results:
+![image](https://github.com/user-attachments/assets/8f2d8d60-4c6a-4bf4-b634-30a729bf80a8)
+
+### Additional information:
+I didn't implemented the "generateStaticParams" function because I got short time to do it and didn't have experience with it, but apart from that, the project is complete. Thank you for the opportunity, I'm sure that I can help you a lot with my skills.
+
+ 
