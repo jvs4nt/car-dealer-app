@@ -41,7 +41,7 @@ const VehiclesList = async ({ makeId, year }: { makeId: string; year: string }) 
 
     return (
         <div>
-            <h1 className="text-3xl font-bold mb-4">Vehicle result for {makeId} - {year}</h1>
+            <h1 className="text-3xl font-bold mb-4">Filtered vehicle result list:</h1>
             {vehicles.length > 0 ? (
                 <ul>
                     {vehicles.map(vehicle => (
@@ -69,7 +69,7 @@ export default function ResultPage({ params }: ResultPageProps) {
                 <button
                     className={'font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-6 bg-blue-500 hover:bg-blue-700 text-white'}
                 >
-                    Go Back
+                    Filter again
                 </button>
             </Link>
         </div>
