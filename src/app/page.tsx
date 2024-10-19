@@ -40,7 +40,7 @@ function FilterPage() {
         <div className="container mx-auto p-4 mt-10 flex flex-col items-center">
             <h1 className="text-3xl font-bold mb-4">Vehicle filter</h1>
             <div className="flex flex-wrap -mx-4">
-                <div className="w-full md:w-1/2 xl:w-1/3 p-4">
+                <div className="w-full md:w-1/2 xl:w-1/2 p-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="make">Brand</label>
                     <select
                         id="make"
@@ -56,7 +56,7 @@ function FilterPage() {
                         ))}
                     </select>
                 </div>
-                <div className="w-full md:w-1/2 xl:w-1/3 p-4">
+                <div className="w-full md:w-1/2 xl:w-1/2 p-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="year">Year</label>
                     <select
                         id="year"
