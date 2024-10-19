@@ -9,7 +9,7 @@ interface Vehicle {
 }
 
 async function getVehicles(makeId: string, year: string): Promise<Vehicle[]> {
-    const res = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeIdYear/makeId/${makeId}/modelyear/${year}?format=json`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/vehicles/GetModelsForMakeIdYear/makeId/${makeId}/modelyear/${year}?format=json`);
     const data = await res.json();
 
     if (data.Results) {

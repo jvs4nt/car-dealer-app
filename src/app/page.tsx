@@ -15,7 +15,7 @@ function FilterPage() {
     const [years, setYears] = useState<number[]>([]);
 
     useEffect(() => {
-        fetch('https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json')
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/vehicles/GetMakesForVehicleType/car?format=json`)
             .then(response => response.json())
             .then(data => setMakes(data.Results));
     }, []);
